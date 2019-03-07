@@ -11,6 +11,10 @@ import MapKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBAction func whenSearchedButtonPressed(_ sender: Any) {
+    }
+    @IBAction func whenZoomButtonPressed(_ sender: Any) {
+    }
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
