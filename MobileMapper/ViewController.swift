@@ -80,8 +80,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 }
             }
         }
-        let placeMark = currentMapItem.placemark
-        print(placeMark)
+        if let phoneNumber = currentMapItem.phoneNumber {
+            createAlert(phoneNumber)
+        }
+    }
+    
+    func createAlert(_ phoneNumber: String) {
+        let alert = UIAlertController(title: "Phone Number", message: "phoneNumber", preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(okayAction)
+        present(alert, animated: true, completion: nil)
+        
     }
     
         }
